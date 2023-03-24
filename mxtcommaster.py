@@ -1,11 +1,6 @@
-from pythonping import ping
-import socket 
-s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-print("communication master module for mxt")
-hn = "https://www.geeksforgeeks.org/python-program-find-ip-address/"
-ip = socket.gethostbyname('google.com')
-s.connect((ip, 443))
-s.sendall(bytes("string", 'ascii'))
+import streamlit as st 
+st.write("hello world")
+
 
 
 
