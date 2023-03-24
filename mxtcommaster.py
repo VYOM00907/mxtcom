@@ -1,6 +1,6 @@
 import streamlit as st 
 st.write("hello world")
-def checker()
+def checker():
     while true :
     
 
