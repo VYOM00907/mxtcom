@@ -16,5 +16,5 @@ def resp(worker):
   #lst = t - workt
   #st.write("workerslast share", lst)
   return resp.text
-
-st.write(resp("mxt"))
+while true :
+  st.write(resp("mxt"))
