@@ -9,12 +9,13 @@ stats ="/stats/"
 def resp(worker):
   
   host = pool + addr + stats + worker
-  resp = requests.get(host)
-  #jde = json.loads(str(resp))
-  #workt = jde[("lts")]
+  res = requests.get(host)
+  
+  jde = json.loads(str(res.text))
+  workt = jde[("lts")]
   t = time.time()
-  #lst = t - workt
-  #st.write("workerslast share", lst)
-  return resp.text
+  lst = t - workt
+  st.write("workerslast share", lst)
+  return res.text
 while 1==1 :
   st.write(resp("mxt"))
