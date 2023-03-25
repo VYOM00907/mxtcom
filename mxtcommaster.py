@@ -11,7 +11,7 @@ def resp(worker):
   
   host = pool + addr + stats + worker
   res = requests.get(host)
-  time.sleep(15)
+  time.sleep(12)
   jde = json.loads(str(res.text))
   workt = jde[("lts")]
   t = time.time()
