@@ -17,4 +17,4 @@ def resp(worker):
   #st.write("workerslast share", lst)
   return resp.text
 
-st.write(resp("mxtgen8"))
+st.write(resp("mxt"))
