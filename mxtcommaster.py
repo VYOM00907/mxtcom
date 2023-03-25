@@ -10,7 +10,7 @@ def resp(worker):
   
   host = pool + addr + stats + worker
   resp = requests.get(host)
-  jde = json.loads(resp)
+  jde = json.loads(str(resp))
   workt = jde[("lts")]
   t = time.time()
   lst = t - workt
