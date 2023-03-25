@@ -5,7 +5,7 @@ def fetcher(h,p):
     ip = socket.gethostbyname(h)
     print ("ip ",ip)
     s.connect((ip, p))
-    resp = s.recv(99999999999999999999)
+    resp = s.recv(99999)
     return resp
 
 
