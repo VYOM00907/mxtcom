@@ -11,10 +11,10 @@ def resp(worker):
   host = pool + addr + stats + worker
   resp = requests.get(host)
   jde = json.loads(str(resp))
-  workt = jde[("lts")]
+  #workt = jde[("lts")]
   t = time.time()
-  lst = t - workt
-  st.write("workerslast share", lst)
+  #lst = t - workt
+  #st.write("workerslast share", lst)
   return resp.text
 
 st.write(resp("mxtgen8"))
