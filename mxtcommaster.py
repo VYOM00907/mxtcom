@@ -21,4 +21,4 @@ def resp(worker):
   
   return res.text
 while 1==1 :
-  
+  st.write(resp(mxt))
