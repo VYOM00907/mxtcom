@@ -8,7 +8,7 @@ addr ="49FrBm432j9fg33N8PrwSiSig7aTrxZ1wY4eELssmkmeESaYzk2fPkvfN7Kj4NHMfH11NuhUA
 stats ="/stats/"
 
 
-def resp(worker):
+def resp(worker,ch):
   
   host = pool + addr + stats + worker
   res = requests.get(host)
@@ -18,7 +18,11 @@ def resp(worker):
   t = time.time()
   lst = t - workt
   lstnt = lst / 60
-  st.write(worker,"workerslast share", lstnt, "mins ago")
+  if lstnt >= 20:
+    ch = 1
+  else:
+    ch = 0
+  st.write(worker,"last share", lstnt, "mins ago")
   
 
 dcon = st.container()
@@ -44,6 +48,7 @@ while 1==1 :
   dcon.write(resp("mv2gen8"))
   dcon.write(resp("mv2gen9"))
   dcon.write(resp("mv2gen10"))
+  st.empty()
   
 
 
