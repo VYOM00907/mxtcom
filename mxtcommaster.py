@@ -21,4 +21,5 @@ def resp(worker):
   
   return res.text
 while 1==1 :
+  st.snow()
   st.write(resp("mxt"))
