@@ -18,10 +18,7 @@ def resp(worker):
   t = time.time()
   lst = t - workt
   lstnt = lst / 60
-  """if lstnt >= 20:
-    ch = 1
-  else:
-    ch = 0"""
+
   st.write(worker,"last share", lstnt, "mins ago")
   
 
