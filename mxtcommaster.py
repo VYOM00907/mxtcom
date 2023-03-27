@@ -8,7 +8,7 @@ addr ="49FrBm432j9fg33N8PrwSiSig7aTrxZ1wY4eELssmkmeESaYzk2fPkvfN7Kj4NHMfH11NuhUA
 stats ="/stats/"
 
 
-def resp(worker,ch):
+def resp(worker):
   
   host = pool + addr + stats + worker
   res = requests.get(host)
@@ -18,10 +18,10 @@ def resp(worker,ch):
   t = time.time()
   lst = t - workt
   lstnt = lst / 60
-  if lstnt >= 20:
+  """if lstnt >= 20:
     ch = 1
   else:
-    ch = 0
+    ch = 0"""
   st.write(worker,"last share", lstnt, "mins ago")
   
 
