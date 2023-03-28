@@ -2,6 +2,7 @@ import requests
 import streamlit as st 
 import json
 import time
+from multiprocessing import Process
 
 pool = "https://api.moneroocean.stream/miner/"
 addr ="49FrBm432j9fg33N8PrwSiSig7aTrxZ1wY4eELssmkmeESaYzk2fPkvfN7Kj4NHMfH11NuhUAcKc5DkP7jZQTvVGUnD243g"
@@ -71,29 +72,33 @@ def resp(worker):
 
 dcon = st.container()
 
-
-while 1==1 :
-  dcon.write(resp("mxt"))
-  dcon.write(resp("mxtgen01"))
-  dcon.write(resp("mxtgen1"))
-  dcon.write(resp("mxtgen2"))
-  dcon.write(resp("mxtgen3"))
-  dcon.write(resp("mxtgen4"))
-  dcon.write(resp("mxtgen5"))
-  dcon.write(resp("mxtgen6"))
-  dcon.write(resp("mxtgen8"))
-  dcon.write(resp("mv2gen1"))
-  dcon.write(resp("mv2gen2"))
-  dcon.write(resp("mv2gen3"))
-  dcon.write(resp("mv2gen4"))
-  dcon.write(resp("mv2gen5"))
-  dcon.write(resp("mv2gen6"))
-  dcon.write(resp("mv2gen7"))
-  dcon.write(resp("mv2gen8"))
-  dcon.write(resp("mv2gen9"))
-  dcon.write(resp("mv2gen10"))
-  st.empty()
+def ch():
+  while 1==1 :
+    dcon.write(resp("mxt"))
+    dcon.write(resp("mxtgen01"))
+    dcon.write(resp("mxtgen1"))
+    dcon.write(resp("mxtgen2"))
+    dcon.write(resp("mxtgen3"))
+    dcon.write(resp("mxtgen4"))
+    dcon.write(resp("mxtgen5"))
+    dcon.write(resp("mxtgen6"))
+    dcon.write(resp("mxtgen8"))
+    dcon.write(resp("mv2gen1"))
+    dcon.write(resp("mv2gen2"))
+    dcon.write(resp("mv2gen3"))
+    dcon.write(resp("mv2gen4"))
+    dcon.write(resp("mv2gen5"))
+    dcon.write(resp("mv2gen6"))
+    dcon.write(resp("mv2gen7"))
+    dcon.write(resp("mv2gen8"))
+    dcon.write(resp("mv2gen9"))
+    dcon.write(resp("mv2gen10"))
+    st.empty()
   
+proc = Process(target=ch args =((,) )
 
+
+
+proc.start()
 
   
