@@ -95,7 +95,7 @@ def ch():
     dcon.write(resp("mv2gen10"))
     st.empty()
   
-proc = Process(target=ch args =((,) )
+proc = Process(target=ch, args =((,) )
 
 
 
