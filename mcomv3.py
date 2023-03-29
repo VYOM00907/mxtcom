@@ -42,7 +42,7 @@ def resp(worker):
     if worker == "mv3gen10":
       requests.get("https://vyom00907-mv3-mv3gen10-t5r8ls.streamlit.app/")
     
-    print(worker,"last share", lstnt, "mins ago")
+
       
 
 def stch():
