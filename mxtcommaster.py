@@ -19,7 +19,7 @@ def resp(worker):
   t = time.time()
   lst = t - workt
   lstnt = lst / 60
-  if lstnt >= 20:
+  if lstnt >= 30:
     # mxt v 1
     if worker == "mxt":
       requests.get("https://vyom00907-mxtcot-app-ikd0lj.streamlit.app/")
@@ -62,43 +62,105 @@ def resp(worker):
       requests.get("https://vyom00907-mv2faujh-mv2gen9-rlq22f.streamlit.app/")
     if worker == "mv2gen10":
       requests.get("https://vyom00907-mv2faujh-mv2gen10-sz9de1.streamlit.app/")
-      
-      
-      
+    #mv3
+    if worker == "mv3gen1":
+      requests.get("https://vyom00907-mv3-mv3gen1-50plcc.streamlit.app/")
+    if worker == "mv3gen2":
+      requests.get("https://vyom00907-mv3-mv3gen2-raij5i.streamlit.app/")
+    if worker == "mv3gen3":
+      requests.get("https://vyom00907-mv3-mv3gen3-9t8981.streamlit.app/")
+    if worker == "mv3gen4":
+      requests.get("https://vyom00907-mv3-mv3gen4-2tysw5.streamlit.app/")
+    if worker == "mv3gen5":
+      requests.get("https://vyom00907-mv3-mv3gen5-azqk9g.streamlit.app/")
+    if worker == "mv3gen6":
+      requests.get("https://vyom00907-mv3-mv3gen6-lp1tyl.streamlit.app/")
+    if worker == "mv3gen7":
+      requests.get("https://vyom00907-mv3-mv3gen7-9h8igu.streamlit.app/")
+    if worker == "mv3gen8":
+      requests.get("https://vyom00907-mv3-mv3gen8-dsgciq.streamlit.app/")
+    if worker == "mv3gen9":
+      requests.get("https://vyom00907-mv3-mv3gen9-a113cm.streamlit.app/")
+    if worker == "mv3gen10":
+      requests.get("https://vyom00907-mv3-mv3gen10-t5r8ls.streamlit.app/")
+    #mv4
+    if worker == "mv4gen1":
+      requests.get("https://vyom00907-mv4-mv4gen1-cnm2nx.streamlit.app/")
+    if worker == "mv4gen2":
+      requests.get("https://vyom00907-mv4-mv4gen2-80oz74.streamlit.app/")
+    if worker == "mv4gen3":
+      requests.get("https://vyom00907-mv4-mv4gen3-hsp0h6.streamlit.app/")
+    if worker == "mv4gen4":
+      requests.get("https://vyom00907-mv4-mv4gen4-mjwhgd.streamlit.app/")
+    if worker == "mv4gen5":
+      requests.get("https://vyom00907-mv4-mv4gen5-pyybud.streamlit.app/")
+    if worker == "mv4gen6":
+      requests.get("https://vyom00907-mv4-mv4gen6-83xtfo.streamlit.app/")
+    if worker == "mv4gen7":
+      requests.get("https://vyom00907-mv4-mv4gen7-3r0hik.streamlit.app/")
+    if worker == "mv4gen8":
+      requests.get("https://vyom00907-mv4-mv4gen8-qxfxtq.streamlit.app/")
+    if worker == "mv4gen9":
+      requests.get("https://vyom00907-mv4-mv4gen9-icdenn.streamlit.app/")
+    if worker == "mv4gen10":
+      requests.get("https://vyom00907-mv4-mv4gen10-b0ki7y.streamlit.app/")
+    print(worker,"last share", lstnt, "mins ago")
       
 
-  st.write(worker,"last share", lstnt, "mins ago")
-  
-
-dcon = st.container()
+def stch():
+    while 1==1 :
+      #mv1
+      resp("mxt")
+      resp("mxtgen01")
+      resp("mxtgen1")
+      resp("mxtgen2")
+      resp("mxtgen3")
+      resp("mxtgen4")
+      resp("mxtgen5")
+      resp("mxtgen6")
+      resp("mxtgen8")
+      #mv2
+      resp("mv2gen1")
+      resp("mv2gen2")
+      resp("mv2gen3")
+      resp("mv2gen4")
+      resp("mv2gen5")
+      resp("mv2gen6")
+      resp("mv2gen7")
+      resp("mv2gen8")
+      resp("mv2gen9")
+      resp("mv2gen10")
+      #mv3
+      resp("mv3gen1")
+      resp("mv3gen2")
+      resp("mv3gen3")
+      resp("mv3gen4")
+      resp("mv3gen5")
+      resp("mv3gen6")
+      resp("mv3gen7")
+      resp("mv3gen8")
+      resp("mv3gen9")
+      resp("mv3gen10")
+      #mv4
+      resp("mv4gen1")
+      resp("mv4gen2")
+      resp("mv4gen3")
+      resp("mv4gen4")
+      resp("mv4gen5")
+      resp("mv4gen6")
+      resp("mv4gen7")
+      resp("mv4gen8")
+      resp("mv4gen9")
+      resp("mv4gen10")
 
 def ch():
-  while 1==1 :
-    dcon.write(resp("mxt"))
-    dcon.write(resp("mxtgen01"))
-    dcon.write(resp("mxtgen1"))
-    dcon.write(resp("mxtgen2"))
-    dcon.write(resp("mxtgen3"))
-    dcon.write(resp("mxtgen4"))
-    dcon.write(resp("mxtgen5"))
-    dcon.write(resp("mxtgen6"))
-    dcon.write(resp("mxtgen8"))
-    dcon.write(resp("mv2gen1"))
-    dcon.write(resp("mv2gen2"))
-    dcon.write(resp("mv2gen3"))
-    dcon.write(resp("mv2gen4"))
-    dcon.write(resp("mv2gen5"))
-    dcon.write(resp("mv2gen6"))
-    dcon.write(resp("mv2gen7"))
-    dcon.write(resp("mv2gen8"))
-    dcon.write(resp("mv2gen9"))
-    dcon.write(resp("mv2gen10"))
-    st.empty()
+  try:
+    stch()
+  except:
+    ch()
+
   
 proc = Process(target=ch ,args=())
-
-
-
 proc.start()
 
   
