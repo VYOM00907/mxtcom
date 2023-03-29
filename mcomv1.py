@@ -43,7 +43,7 @@ def resp(worker):
       requests.get("https://vyom00907-mxtfaujh-mxtgen8-klnuoc.streamlit.app/")
     
     
-    print(worker,"last share", lstnt, "mins ago")
+    
       
 
 def stch():
