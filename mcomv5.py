@@ -19,7 +19,7 @@ def resp(worker):
   t = time.time()
   lst = t - workt
   lstnt = lst / 60
-  if lstnt >= 30:
+  if lstnt >= 20:
     #mv4
     if worker == "mv5gen1":
       requests.get("https://vyom00907-mv5-mv5gen1-4bq2p2.streamlit.app/")
